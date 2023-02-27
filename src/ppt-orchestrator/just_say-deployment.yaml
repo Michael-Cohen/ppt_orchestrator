@@ -1,0 +1,52 @@
+###
+### A complete description of a Prefect Deployment for flow 'The just-say flow'
+###
+name: just_say_deployment
+description: A flow that just says something
+version: 59f7a484fe74b043116a1dcea7ca215f
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters:
+  output_msg: a
+  name: Hector
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: The just-say flow
+manifest_path: null
+storage: null
+path: /Users/michaelcohen/PycharmProjects/ppt_orchestator/src/ppt-orchestrator
+entrypoint: orchestrate.py:just_say
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    output_msg:
+      title: output_msg
+      position: 0
+      type: string
+    name:
+      title: name
+      position: 1
+      type: string
+  required:
+  - output_msg
+  - name
+  definitions: null
+timestamp: '2023-02-27T13:34:22.191412+00:00'
